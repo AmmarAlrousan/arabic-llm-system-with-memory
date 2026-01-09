@@ -8,6 +8,9 @@ This repository focuses on **LLM system architecture and prompt orchestration**,
 not on building a production-ready chatbot or user interface.
 
 ---
+## Note:
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+--
 
 ## 🎯 Motivation
 While modern LLMs demonstrate strong generative abilities, controlling:
