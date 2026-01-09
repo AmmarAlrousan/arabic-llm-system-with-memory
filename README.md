@@ -39,47 +39,58 @@ The system is structured around clear separation of responsibilities:
 
 ---
 
-## 📁 Repository Structure
+## 🔧 LLM Backend Configuration
+ASM is **model-agnostic** and does not bundle any LLM weights.
+
+The system communicates with a **local OpenAI-compatible LLM server**
+(e.g., LM Studio, Ollama, llama.cpp server).
+
+During development, the system was tested using **Qwen** as the backend model.
+
+The active model is specified indirectly via the local server and referenced in:
 
 
+core/config.py
+
+```python
+MODEL_NAME = "local-llm"
+BASE_URL = "http://127.0.0.1:1234/v1"
+```
+Any compatible LLM (Qwen, LLaMA, Mistral, etc.) can be used by updating the
+server configuration and model identifier.
+
+📁 Repository Structure
 asm-arabic-llm-architecture/
 │
-
-├── core/ # LLM orchestration logic
-
-├── layers/ # modular prompt and memory layers
-
-├── interface/ # minimal prototype interface
-
-├── memory/ # persistent memory storage
-
-├── docs/ # system overview and design notes
-
-├── examples/ # sample conversations
-
+├── core/                 # LLM orchestration logic
+├── layers/               # modular prompt and memory layers
+├── interface/            # minimal prototype interface
+├── memory/               # persistent memory storage
+├── docs/                 # system overview and design notes
+├── examples/             # sample conversations
 ├── requirements.txt
-
 └── README.md
 
+🖥 Interface
 
----
-
-## 🖥 Interface
 A minimal PyQt-based interface is included to demonstrate usability.
 
-> The interface is intentionally simple.  
-> The research contribution lies in **system design**, not UI complexity.
+The interface is intentionally simple.
+The research contribution lies in system design, not UI complexity.
 
----
+⚙️ How to Run
 
-## ⚙️ How to Run
-1. Install dependencies:
-```bash
+Install dependencies:
+
 pip install -r requirements.txt
-```
-2. Run the prototype interface:
-   python interface/gui_pyqt.py
-A local OpenAI-compatible LLM server (e.g., LM Studio, Ollama) must be running.
+
+
+Ensure a local OpenAI-compatible LLM server is running
+(e.g., LM Studio or Ollama).
+
+Run the prototype interface:
+
+python interface/gui_pyqt.py
 
 🧪 Research Context
 
