@@ -10,3 +10,5 @@ This folder contains a minimal PyQt-based interface used to demonstrate the ASM 
 ## How to run
 ```bash
 python interface/gui_pyqt.py
+```
+Future work may include a web-based interface (e.g., Streamlit).
