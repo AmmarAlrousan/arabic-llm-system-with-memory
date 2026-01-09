@@ -56,74 +56,83 @@ core/config.py
 MODEL_NAME = "local-llm"
 BASE_URL = "http://127.0.0.1:1234/v1"
 ```
+
 Any compatible LLM (Qwen, LLaMA, Mistral, etc.) can be used by updating the
 server configuration and model identifier.
 
 📁 Repository Structure
 asm-arabic-llm-architecture/
 │
+
 ├── core/                 # LLM orchestration logic
+
 ├── layers/               # modular prompt and memory layers
+
 ├── interface/            # minimal prototype interface
+
 ├── memory/               # persistent memory storage
+
 ├── docs/                 # system overview and design notes
+
 ├── examples/             # sample conversations
+
 ├── requirements.txt
+
 └── README.md
 
-🖥 Interface
+## 🖥 Interface
 
 A minimal PyQt-based interface is included to demonstrate usability.
 
 The interface is intentionally simple.
 The research contribution lies in system design, not UI complexity.
 
-⚙️ How to Run
+## ⚙️ How to Run
 
 Install dependencies:
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 
-Ensure a local OpenAI-compatible LLM server is running
-(e.g., LM Studio or Ollama).
+  Ensure a local OpenAI-compatible LLM server is running
+  (e.g., LM Studio or Ollama).
 
-Run the prototype interface:
+# Run the prototype interface:
 
 python interface/gui_pyqt.py
 
-🧪 Research Context
+## 🧪 Research Context
 
 This project serves as a system-level exploration of LLM behavior control and
 human-centered AI design, particularly for Arabic language interaction.
 
 It complements research in areas such as:
 
-affective computing,
+  affective computing,
 
-explainable AI,
+  explainable AI,
 
-human-centered AI systems.
+  human-centered AI systems.
 
-🚧 Limitations
+## 🚧 Limitations
 
-Prototype-level implementation.
+  Prototype-level implementation.
 
-Not optimized for concurrency or scalability.
+  Not optimized for concurrency or scalability.
 
-Designed for experimentation and architectural exploration.
+  Designed for experimentation and architectural exploration.
 
-🔮 Future Work
+## 🔮 Future Work
 
-Web-based interface (e.g., Streamlit).
+  Web-based interface (e.g., Streamlit).
 
-Emotion-aware prompt adaptation.
+  Emotion-aware prompt adaptation.
 
-Multi-agent reasoning layers.
+  Multi-agent reasoning layers.
 
-Integration with perception modules (e.g., vision or emotion models).
+  Integration with perception modules (e.g., vision or emotion models).
 
-📬 Contact
+## 📬 Contact
 
 Ammar Alrousan
 AI Student | Research-oriented
