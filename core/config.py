@@ -1,4 +1,5 @@
 # core/config.py
+# MODEL_NAME should match your LLM server’s model identifier
 
 MODEL_NAME = "local-llm"
 BASE_URL = "http://127.0.0.1:1234/v1"
